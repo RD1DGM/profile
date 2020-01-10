@@ -1,7 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import "../../scss/components/sections/introduction_bg.scss";
-import { ContextCreator } from "../../store";
+import useActions from "../../store/actions";
 
 const THRESHHOLD = [
   0.9,
@@ -18,35 +18,17 @@ const THRESHHOLD = [
 ];
 
 function IntroductionBG() {
-  const { state, dispatch } = React.useContext(ContextCreator);
+  const { getTargetClass } = useActions();
   const [ref, inView, entry] = useInView({ threshold: THRESHHOLD });
-
   const target = entry && entry.target.classList[1];
+  const boundingClient = entry && entry.boundingClientRect.top;
 
-  React.useEffect(
-    () =>
-      dispatch({
-        type: "SET_TARGET_CLASS",
-        targetClass: target
-      }),
-    [target, dispatch]
-  );
-
-  // console.log(state.targetClass);
-
-  //   console.log("target:", entry && entry);
-  //   console.log("target:", entry && entry.target);
-  //   console.log("ratio:", entry && entry.intersectionRatio);
-  // console.log("ratio:", entry && entry.boundingClientRect.top);
+  React.useEffect(() => getTargetClass(target), [target, getTargetClass]);
 
   return (
     <div
       ref={ref}
-      className={
-        entry && entry.boundingClientRect.top >= -20
-          ? "intro_box revert"
-          : "intro_box fill"
-      }
+      className={boundingClient >= -20 ? "intro_box revert" : "intro_box fill"}
     />
   );
 }

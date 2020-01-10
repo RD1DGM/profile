@@ -6,17 +6,39 @@
   overflow: hidden;
 
   p:nth-child(1) {
-    color: #1c1d25;
-    font-weight: bolder;
-    font-size: 6.75rem;
+    color: #ffffff;
+    font-size: 4.5rem;
+    font-weight: 100;
     opacity: 0;
+
+    span {
+      color: hsl(233, 14%, 20%);
+      font-weight: 600;
+    }
   }
 
   p:nth-child(2) {
-    color: #1c1d25;
-    font-weight: bolder;
-    font-size: 6.75rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    color: hsl(233, 14%, 20%);
     opacity: 0;
+    margin-right: 1rem;
+
+    span {
+      margin: 0px 5px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 2px;
+        background: #ffffff;
+        animation: fullWidth 600ms ease 1850ms forwards;
+      }
+    }
   }
 }
 
@@ -26,6 +48,10 @@
 
 .slideOut {
   animation: slideOut 650ms ease forwards;
+}
+
+.slideLeft {
+  animation: slideLeft 650ms ease 1150ms forwards;
 }
 
 @keyframes slideIn {
@@ -49,5 +75,27 @@
   to {
     transform: translateY(150px);
     opacity: 0;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fullWidth {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 220px;
   }
 }

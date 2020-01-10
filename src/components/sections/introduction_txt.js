@@ -15,16 +15,16 @@ function IntroductionTxt() {
           state.targetClass === (undefined || "revert") ? "slideIn" : "slideOut"
         }
       >
-        Hello~
+        Hello, I'm <span>Rafael Mariscal</span>.
       </p>
-
       <p
         className={
-          state.targetClass === (undefined || "revert") ? "slideIn" : "slideOut"
+          state.targetClass === (undefined || "revert")
+            ? "slideLeft"
+            : "slideOut"
         }
       >
-        {" "}
-        I'm Rafael
+        An Interactive <span>Front-end Developer</span>
       </p>
     </div>
   );
