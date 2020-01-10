@@ -32,12 +32,12 @@ function IntroductionBG() {
     [target, dispatch]
   );
 
-  console.log(state.targetClass);
+  // console.log(state.targetClass);
 
   //   console.log("target:", entry && entry);
   //   console.log("target:", entry && entry.target);
   //   console.log("ratio:", entry && entry.intersectionRatio);
-  console.log("ratio:", entry && entry.boundingClientRect.top);
+  // console.log("ratio:", entry && entry.boundingClientRect.top);
 
   return (
     <div
