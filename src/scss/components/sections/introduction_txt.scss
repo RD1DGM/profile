@@ -1,0 +1,46 @@
+.intro_txt {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+
+  > p {
+    color: #1c1d25;
+    font-weight: bolder;
+    font-size: 6.75rem;
+    opacity: 0;
+  }
+}
+
+.slideIn {
+  animation: slideIn 650ms ease 550ms forwards;
+}
+
+.slideOut {
+  animation: slideOut 650ms ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+}

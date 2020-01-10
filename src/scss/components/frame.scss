@@ -1,0 +1,13 @@
+.frame {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  border-top: 3.5rem solid #1c1d25;
+  border-left: 3.5rem solid #1c1d25;
+  border-bottom: 3.5rem solid #1c1d25;
+  border-right: 4.5rem solid #1c1d25;
+  position: fixed;
+  top: 0px;
+  z-index: 20;
+  //   opacity: 0.5;
+}
