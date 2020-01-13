@@ -1,8 +1,7 @@
 import React from "react";
-import '../scss/components/app.scss'
+import "../scss/components/app.scss";
 import Introduction from "./introduction";
 import Frame from "./frame";
-
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
       <Frame />
       <Introduction />
     </div>
-  )
-
+  );
 }
 
 export default App;

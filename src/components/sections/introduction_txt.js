@@ -1,12 +1,9 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import "../../scss/components/sections/introduction_txt.scss";
 import { ContextCreator } from "../../store";
 
 function IntroductionTxt() {
   const { state } = React.useContext(ContextCreator);
-
-  //   console.log(state, dispatch);
 
   return (
     <div className="intro_txt">
@@ -24,8 +21,22 @@ function IntroductionTxt() {
             : "slideOut"
         }
       >
-        An Interactive <span>Front-end Developer</span>
+        Interactive{" "}
+        <span
+          className={
+            state.targetClass === (undefined || "revert") ? "colorChange" : null
+          }
+        >
+          Front-end Developer
+        </span>
       </p>
+      <div
+        className={
+          state.targetClass === (undefined || "revert")
+            ? "underline fullWidth"
+            : "underline zeroWidth"
+        }
+      ></div>
     </div>
   );
 }
