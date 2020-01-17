@@ -1,14 +1,20 @@
 import React from "react";
-import "../scss/components/app.scss";
 import Introduction from "./introduction";
 import Frame from "./frame";
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  height: 500vh;
+  overflow-x: hidden;
+  background-color: hsl(233, 14%, 13%);
+`;
 
 function App() {
   return (
-    <div className="app_body">
+    <AppContainer>
       <Frame />
       <Introduction />
-    </div>
+    </AppContainer>
   );
 }
 

@@ -1,20 +1,89 @@
 import React from "react";
 import { ContextCreator } from "../../store";
-import "../../scss/components/sections/introduction_arrow.scss";
+import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
+import Arrow from "../../assets/arrow-down.svg";
+
+const IntroArrow = styled.div`
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: flex-end;
+  justify-self: center;
+  opacity: 0;
+`;
+
+const fadeIn = keyframes`
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+ `;
+const fadeOut = keyframes`
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+ `;
+
+const FadeIn = styled(IntroArrow)`
+  animation: ${fadeIn} 600ms ease 2250ms forwards;
+`;
+
+const FadeOut = styled(IntroArrow)`
+  animation: ${fadeOut} 600ms ease forwards;
+`;
+
+const ScrollDown = styled.div`
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  transform: rotate(-90deg) translateX(1rem);
+  color: hsl(233, 14%, 20%);
+
+  @media only screen and (max-width: 600px) {
+    font-weight: 700;
+    font-size: 0.65rem;
+    transform: rotate(-90deg) translate(0.7rem, -0.25rem);
+  }
+`;
+
+const ArrowDown = styled(motion.div)`
+  background: url(${Arrow}) no-repeat;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  left: 25px;
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    height: 13px;
+    width: 13px;
+    left: 10px;
+  }
+`;
 
 function IntroductionArrow() {
   const { state } = React.useContext(ContextCreator);
-  return (
-    <div
-      className={
-        state.targetClass === (undefined || "revert")
-          ? "intro-arrow fadeIn"
-          : "intro-arrow fadeOut"
-      }
-    >
-      <div className="scroll-down">Scroll</div>
-      <div className="arrow-down" />
-    </div>
+  return state.targetClass === (undefined || "revert") ? (
+    <FadeIn>
+      <ScrollDown>Scroll</ScrollDown>
+      <ArrowDown
+        // initial={{ translateX: "1.5rem" }}
+        animate={{
+          translateY: ["5%", "15%", "90%"]
+        }}
+        transition={{ duration: 0.4, yoyo: Infinity }}
+      />
+    </FadeIn>
+  ) : (
+    <FadeOut>
+      <ScrollDown>Scroll</ScrollDown>
+    </FadeOut>
   );
 }
 

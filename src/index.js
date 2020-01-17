@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app";
 import { reducer, initialState, ContextCreator } from "./store";
-import "./scss/utils/reset.scss";
+import "./scss/reset.scss";
 import * as serviceWorker from "./serviceWorker";
 
 const Store = () => {
