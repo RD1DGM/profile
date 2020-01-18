@@ -30,7 +30,7 @@ const fadeOut = keyframes`
  `;
 
 const FadeIn = styled(IntroArrow)`
-  animation: ${fadeIn} 600ms ease 2250ms forwards;
+  animation: ${fadeIn} 600ms ease 3000ms forwards;
 `;
 
 const FadeOut = styled(IntroArrow)`
@@ -73,7 +73,6 @@ function IntroductionArrow() {
     <FadeIn>
       <ScrollDown>Scroll</ScrollDown>
       <ArrowDown
-        // initial={{ translateX: "1.5rem" }}
         animate={{
           translateY: ["5%", "15%", "90%"]
         }}

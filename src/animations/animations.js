@@ -6,7 +6,7 @@ export const fadeUp = {
   },
   transition: {
     ease: "easeOut",
-    delay: 0.8,
+    delay: 1,
     type: "spring"
   }
 };
@@ -29,8 +29,8 @@ export const slideLeft = {
     opacity: 1
   },
   transition: {
-    delay: 1.3
-    // type: "spring"
+    delay: 1.7,
+    type: "spring"
     // damping: 7
   }
 };
@@ -52,8 +52,8 @@ export const colorChange = {
     fontWeight: 700
   },
   transition: {
-    duration: 0.03,
-    delay: 1.75,
+    duration: 0.1,
+    delay: 2.75,
     ease: "easeOut"
   }
 };

@@ -10,7 +10,6 @@ import {
   colorChange,
   revertColor
 } from "../../animations/animations";
-// import "../../scss/components/sections/introduction_txt.scss";
 
 const IntroText = styled.div`
   grid-row: 2/3;
@@ -32,13 +31,12 @@ const IntroText = styled.div`
 const P1 = styled(motion.p)`
   color: #fff;
   font-size: 6rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -3px;
 
   span {
     color: hsl(233, 14%, 20%);
     margin-left: 1.5rem;
-    font-weight: 700;
 
     @media only screen and (max-width: 600px) {
       margin-left: 0.5rem;
@@ -64,7 +62,7 @@ const P2 = styled(motion.p)`
   margin-top: -0.5rem;
   margin-left: 0.25rem;
 
-  span {
+  span:nth-child(1) {
     margin: 0px 9px;
 
     @media only screen and (max-width: 600px) {
@@ -73,7 +71,7 @@ const P2 = styled(motion.p)`
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-left: 1.5px;
   }
 
@@ -126,12 +124,12 @@ const fullSm = keyframes`
   }
 
   to {
-    width: 18rem;
+    width: 14.5rem;
   }
 `;
 const revertSm = keyframes`
   from {
-    width: 18rem;
+    width: 14.5rem;
   }
 
   to {
@@ -147,7 +145,7 @@ const Underline = styled(motion.div)`
   animation: ${props =>
     props.target === "revert"
       ? css`
-          ${fullLg} 600ms ease 1200ms both
+          ${fullLg} 600ms ease 2300ms both
         `
       : css`
           ${revertLg} 400ms ease both
@@ -159,7 +157,7 @@ const Underline = styled(motion.div)`
     animation: ${props =>
       props.target === "revert"
         ? css`
-            ${fullSm} 600ms ease 1200ms both
+            ${fullSm} 600ms ease 2300ms both
           `
         : css`
             ${revertSm} 400ms ease both
@@ -172,7 +170,7 @@ const Underline = styled(motion.div)`
     animation: ${props =>
       props.target === "revert"
         ? css`
-            ${fullMd} 600ms ease 1200ms both
+            ${fullMd} 600ms ease 2300ms both
           `
         : css`
             ${revertMd} 400ms ease both

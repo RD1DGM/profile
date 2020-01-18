@@ -1,11 +1,14 @@
 import React from "react";
 import Introduction from "./introduction";
 import Frame from "./frame";
+import Icon from "./icon";
 import styled from "styled-components";
+import ScrollBar from "./scrollbar";
+import Email from "./email";
 
 const AppContainer = styled.div`
-  height: 500vh;
-  overflow-x: hidden;
+  height: 200vh;
+  overflow: hidden;
   background-color: hsl(233, 14%, 13%);
 `;
 
@@ -14,6 +17,9 @@ function App() {
     <AppContainer>
       <Frame />
       <Introduction />
+      <Icon />
+      <ScrollBar />
+      <Email />
     </AppContainer>
   );
 }

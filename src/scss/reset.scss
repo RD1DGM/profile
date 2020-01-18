@@ -10,6 +10,16 @@
   // font-family: montserrat, sans-serif;
 }
 
+html,
+body {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body,
 p,
 h4,
@@ -24,6 +34,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  scrollbar-width: none;
 }
 
 img {
