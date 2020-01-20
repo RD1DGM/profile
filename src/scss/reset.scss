@@ -17,7 +17,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome */
 }
 
 body,
@@ -32,7 +32,7 @@ body {
   min-height: 100%;
   max-width: 100%;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
   line-height: 1.5;
   scrollbar-width: none;
 }

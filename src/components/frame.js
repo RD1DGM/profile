@@ -8,7 +8,7 @@ const AppFrame = styled.div`
   border: 3.5rem solid hsl(233, 14%, 13%);
   position: fixed;
   top: 0px;
-  z-index: 5;
+  z-index: 99;
 
   @media only screen and (max-width: 740px) {
     display: none;

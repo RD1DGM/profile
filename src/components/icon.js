@@ -11,7 +11,7 @@ const NavLogo = styled(motion.img)`
   top: 0.5rem;
   left: 3.5rem;
   cursor: pointer;
-  z-index: 5;
+  z-index: 100;
 
   @media only screen and (max-width: 740px) {
     display: none;

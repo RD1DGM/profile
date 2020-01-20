@@ -80,9 +80,7 @@ function IntroductionArrow() {
       />
     </FadeIn>
   ) : (
-    <FadeOut>
-      <ScrollDown>Scroll</ScrollDown>
-    </FadeOut>
+    <FadeOut></FadeOut>
   );
 }
 

@@ -3,6 +3,7 @@ import IntroductionBG from "./sections/introduction_bg";
 import IntroductionTxt from "./sections/introduction_txt";
 import IntroductionArrow from "./sections/introduction_arrow";
 import styled from "styled-components";
+import IntroductionAbout from "./sections/introduction_about";
 
 const Intro = styled.div`
   display: grid;
@@ -21,6 +22,7 @@ function Introduction() {
       <IntroductionBG />
       <IntroductionTxt />
       <IntroductionArrow />
+      <IntroductionAbout />
     </Intro>
   );
 }

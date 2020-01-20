@@ -41,7 +41,7 @@ const IntroBox = styled.div`
 `;
 
 function IntroductionBG() {
-  const { getTargetClass, setFillMode } = useActions();
+  const { getTargetClass } = useActions();
   const [ref, inView, entry] = useInView({ threshold: THRESHHOLD });
   const target =
     entry && entry.target.classList[entry.target.classList.length - 1];

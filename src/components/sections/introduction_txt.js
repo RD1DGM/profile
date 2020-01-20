@@ -30,7 +30,8 @@ const IntroText = styled.div`
 
 const P1 = styled(motion.p)`
   color: #fff;
-  font-size: 6rem;
+  ${"" /* font-size: 6rem; */}
+  font-size: calc(2.25rem + 3.5vw);
   font-weight: 700;
   letter-spacing: -3px;
 
@@ -44,11 +45,11 @@ const P1 = styled(motion.p)`
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 2rem;
+    ${"" /* font-size: 2rem; */}
   }
 
   @media only screen and (min-width: 600px) and (max-width: 1135px) {
-    font-size: 3.5rem;
+    ${"" /* font-size: 3.5rem; */}
   }
 `;
 
@@ -86,7 +87,7 @@ const fullLg = keyframes`
   }
 
   to {
-    width: 28.75rem;
+ width: 28.75rem;
   }
 `;
 const revertLg = keyframes`

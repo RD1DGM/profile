@@ -11,7 +11,7 @@ const EmailDiv = styled.div`
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 20;
+  z-index: 100;
 
   &::after {
     content: "";

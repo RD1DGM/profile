@@ -29,14 +29,17 @@ export function useWindowDimensions() {
 
 const ScrolledDiv = styled.div`
   height: ${props => props.state * 100}vh;
-  width: 9px;
-  z-index: 10;
+  width: 6px;
+  z-index: 101;
   display: relative;
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #1d1e26;
-  border-left: 5px solid #e6bb00;
+  background-color: #e6bb00;
+
+  @media only screen and (max-width: 740px) {
+    background-color: #1d1e26;
+  }
 `;
 
 function ScrollBar() {
