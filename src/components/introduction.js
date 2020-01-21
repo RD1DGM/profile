@@ -1,9 +1,10 @@
 import React from "react";
-import IntroductionBG from "./sections/introduction_bg";
-import IntroductionTxt from "./sections/introduction_txt";
-import IntroductionArrow from "./sections/introduction_arrow";
+import IntroductionBG from "./sections/intro_background";
+import IntroductionTxt from "./sections/intro_landing_text";
+import IntroductionArrow from "./sections/intro_landing_arrow";
 import styled from "styled-components";
-import IntroductionAbout from "./sections/introduction_about";
+import IntroductionAbout from "./sections/intro_about_heading";
+import IntroductionParagraph from "./sections/intro_about_p";
 
 const Intro = styled.div`
   display: grid;
@@ -23,6 +24,7 @@ function Introduction() {
       <IntroductionTxt />
       <IntroductionArrow />
       <IntroductionAbout />
+      <IntroductionParagraph />
     </Intro>
   );
 }

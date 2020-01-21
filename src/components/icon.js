@@ -13,6 +13,11 @@ const NavLogo = styled(motion.img)`
   cursor: pointer;
   z-index: 100;
 
+  &:hover {
+    width: 50px;
+    height: 50px;
+  }
+
   @media only screen and (max-width: 740px) {
     display: none;
   }
@@ -21,6 +26,10 @@ const NavLogo = styled(motion.img)`
 function icon() {
   return (
     <NavLogo
+      whileHover={{
+        rotate: -45,
+        scale: 0.8
+      }}
       initial={{ opacity: 0, translateY: -40, scale: 1.5 }}
       animate={{ opacity: 1, translateY: 0, scale: 1 }}
       transition={{ type: "spring", damping: 6 }}
