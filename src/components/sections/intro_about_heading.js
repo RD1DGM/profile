@@ -18,7 +18,6 @@ const AboutText = styled.div`
   grid-row: 1/4;
   justify-self: flex-end;
   align-self: center;
-  padding-bottom: 0.5rem;
   font-size: calc(5.25rem + 5.5vw);
   font-weight: 900;
   letter-spacing: -3px;
@@ -52,9 +51,13 @@ const AboutText = styled.div`
     justify-self: center;
     align-self: flex-end;
     transform: none;
-    margin-bottom: 5.5rem;
+    margin-bottom: 8.4rem;
     letter-spacing: 0.15rem;
     font-size: calc(2.25rem + 5.5vw);
+  }
+
+  @media screen and (min-width: 740px) and (max-width:800px) {
+    margin-right: -5rem;
   }
 `;
 

@@ -12,6 +12,11 @@ import vue from "../../assets/vue.svg";
 import illustrator from "../../assets/illustrator.svg";
 import sketch from "../../assets/sketch.svg";
 import xd from "../../assets/xd.svg";
+import affinity from "../../assets/affinity.svg";
+import github from "../../assets/github.svg";
+import gitlab from "../../assets/gitlab.svg";
+import git from "../../assets/git.svg";
+import jira from "../../assets/jira.svg";
 
 const fadeIn = keyframes`
 from {
@@ -36,7 +41,7 @@ const AboutP = styled.div`
   line-height: 1.5;
   display: ${props => (props.state === "fill" ? "initial" : "none")};
   animation: ${fadeIn} 600ms ease-out 1150ms forwards;
-  transform: translateY(-5rem);
+  transform: translateY(-8rem);
   color: hsl(233, 14%, 20%);
   opacity: 0;
   z-index: 20;
@@ -49,7 +54,7 @@ const AboutP = styled.div`
     font-size: calc(0.8rem + 0.3vw);
     font-style: italic;
     animation: ${fadeIn} 600ms ease-out 1350ms forwards;
-    transform: translateY(4.5rem);
+    transform: translateY(3rem);
     opacity: 0;
   }
 
@@ -71,11 +76,11 @@ const AboutList = styled.div`
   grid-column: 2/3;
   grid-row: 3/4;
   justify-self: flex-start;
-  margin-top: 1rem;
+  margin-top: -3.5rem;
   margin-left: 0.5rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(150px, 300px));
-  grid-auto-rows: 2.25rem;
+  grid-auto-rows: 2.15rem;
   display: ${props => (props.state === "fill" ? "grid" : "none")};
   animation: ${fadeIn} 600ms ease-out 1650ms forwards;
   opacity: 0;
@@ -169,7 +174,7 @@ const AboutList = styled.div`
     background-size: contain;
   }
 
-  p:nth-child(10) {
+  p:nth-child(9) {
     grid-column: 1/3;
     margin: 2.5rem 0 0 1.6rem;
     font-weight: 800;
@@ -181,7 +186,7 @@ const AboutList = styled.div`
     }
   }
 
-  p:nth-child(11)::before {
+  p:nth-child(10)::before {
     content: "";
     background: url(${illustrator});
     background-repeat: no-repeat;
@@ -192,18 +197,72 @@ const AboutList = styled.div`
     height: calc(15px + 0.5vw);
   }
 
-  p:nth-child(12)::before {
+  p:nth-child(11)::before {
     content: "";
     background: url(${sketch});
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  p:nth-child(13)::before {
+  p:nth-child(12)::before {
     content: "";
     background: url(${xd});
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  p:nth-child(13)::before {
+    content: "";
+    background: url(${affinity});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  p:nth-child(14) {
+    grid-column: 1/3;
+    margin: 2.5rem 0 0 1.6rem;
+    font-weight: 800;
+    transform: translate(-2rem, -2.4rem);
+    text-decoration: underline;
+
+    @media only screen and (max-width: 750px) {
+      justify-self: center;
+    }
+  }
+
+  p:nth-child(15)::before {
+    content: "";
+    background: url(${github});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  p:nth-child(16)::before {
+    content: "";
+    background: url(${gitlab});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  p:nth-child(17)::before {
+    content: "";
+    background: url(${git});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  p:nth-child(18)::before {
+    content: "";
+    background: url(${jira});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media only screen and (max-width: 550px) {
+    p {
+      margin-left: 1rem;
+      justify-self: flex-start;
+    }
   }
 
   @media only screen and (max-width: 740px) {
@@ -215,10 +274,8 @@ const AboutList = styled.div`
     }
   }
 
-  @media only screen and (max-width: 550px) {
-    p {
-      justify-self: flex-start;
-    }
+  @media only screen and (min-width: 740px) and (max-width: 845px) {
+    margin-top: -5rem;
   }
 `;
 
@@ -230,18 +287,17 @@ function IntroductionParagraph() {
   return (
     <>
       <AboutP state={target}>
-        Hello! I’m Rafael, a <b>front-end developer </b> &{" "}
-        <b> UI/UX Designer</b> based in Toronto, ON. I have an obsession for
-        building interactive and intuitive User Interface and User Experience. I
-        develop dynamic and responsive <strong>web</strong> and{" "}
+        Hello! I’m Rafael, a <b>front-end developer </b> & <b> UI Designer</b>{" "}
+        based in Toronto, ON. I have an obsession for building interactive and
+        intuitive User Interface and User Experience. I develop dynamic and
+        responsive <strong>web</strong> and{" "}
         <strong>blockchain applications</strong> that provides pixel-perfect
         interface.
         <p>The tools and technologies i've been working with recently:</p>
       </AboutP>
       <AboutList state={target}>
         <p>Programming</p>
-        {/* <p></p> */}
-        <p>Javascript (ES6+)</p>
+        <p>Javascript(ES6+)</p>
         <p>
           HTML & <span>(S)CSS</span>
         </p>
@@ -250,11 +306,16 @@ function IntroductionParagraph() {
         <p>Node.js</p>
         <p>Express.js</p>
         <p>Solidity (Ethereum)</p>
-        <p></p>
         <p>Design</p>
         <p>Adobe Illustrator</p>
         <p>Sketch</p>
         <p>Adobe XD</p>
+        <p>Affinity Designer</p>
+        <p>Project Management & Collaboration</p>
+        <p>Github</p>
+        <p>Gitlab</p>
+        <p>Git</p>
+        <p>Jira</p>
       </AboutList>
     </>
   );
