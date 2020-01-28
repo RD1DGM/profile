@@ -3,10 +3,10 @@ import IntroductionBG from "./sections/intro_background";
 import IntroductionTxt from "./sections/intro_landing_text";
 import IntroductionArrow from "./sections/intro_landing_arrow";
 import styled from "styled-components";
-import IntroductionAbout from "./sections/intro_about_heading";
+import IntroductionAbout from "./sections/intro_about_header";
 import IntroductionParagraph from "./sections/intro_about_p";
 
-const Intro = styled.div`
+export const IntroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: 1fr auto 1fr;
@@ -19,13 +19,13 @@ const Intro = styled.div`
 
 function Introduction() {
   return (
-    <Intro>
+    <IntroContainer>
       <IntroductionBG />
       <IntroductionTxt />
       <IntroductionArrow />
       <IntroductionAbout />
       <IntroductionParagraph />
-    </Intro>
+    </IntroContainer>
   );
 }
 

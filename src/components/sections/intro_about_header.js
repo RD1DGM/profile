@@ -13,7 +13,7 @@ to {
 }
 `;
 
-const AboutText = styled.div`
+export const AboutText = styled.div`
   grid-column: 1/2;
   grid-row: 1/4;
   justify-self: flex-end;
@@ -51,12 +51,12 @@ const AboutText = styled.div`
     justify-self: center;
     align-self: flex-end;
     transform: none;
-    margin-bottom: 8.4rem;
+    margin-bottom: 9.4rem;
     letter-spacing: 0.15rem;
     font-size: calc(2.25rem + 5.5vw);
   }
 
-  @media screen and (min-width: 740px) and (max-width:800px) {
+  @media screen and (min-width: 740px) and (max-width:845px) {
     margin-right: -5rem;
   }
 `;

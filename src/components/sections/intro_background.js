@@ -33,16 +33,20 @@ const IntroBox = styled.div`
   background: hsl(49, 100%, 45%);
   height: ${props => (props.clientRect >= -20 ? "50vh" : "100vh")};
   width: 100vw;
-  grid-row: 1/6;
-  grid-column: 1/6;
+  grid-row: 1/4;
+  grid-column: 1/4;
   opacity: 0;
   transition: height 1100ms ease;
   animation: ${fadeIn} 800ms ease 250ms forwards;
+
+  @media only screen and (max-height: 900px) {
+    height: ${props => (props.clientRect >= -20 ? "50vh" : "100%")};
+  }
 `;
 
 function IntroductionBG() {
   const { getTargetClass } = useActions();
-  const [ref, inView, entry] = useInView({ threshold: THRESHHOLD });
+  const [ref, , entry] = useInView({ threshold: THRESHHOLD });
   const target =
     entry && entry.target.classList[entry.target.classList.length - 1];
   const boundingClient = entry && entry.boundingClientRect.top;

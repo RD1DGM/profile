@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 function getWindowViewPortScroll() {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
@@ -27,8 +27,11 @@ export function useWindowDimensions() {
   return windowDimensions;
 }
 
-const ScrolledDiv = styled.div`
-  height: ${props => props.state * 100}vh;
+const ScrolledDiv = styled.div.attrs(props => ({
+  style: {
+    height: `${props.state * 100}vh`
+  }
+}))`
   width: 6px;
   z-index: 101;
   display: relative;

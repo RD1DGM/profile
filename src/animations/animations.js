@@ -18,6 +18,7 @@ export const fadeDown = {
     opacity: 0
   },
   transition: {
+    ease: "easeOut",
     type: "spring"
   }
 };

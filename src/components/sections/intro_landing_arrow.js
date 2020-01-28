@@ -40,7 +40,7 @@ const FadeOut = styled(IntroArrow)`
 const ScrollDown = styled.div`
   letter-spacing: 1px;
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   transform: rotate(-90deg) translateX(1rem);
   color: hsl(233, 14%, 20%);
 
@@ -57,7 +57,7 @@ const ArrowDown = styled(motion.div)`
   position: relative;
   height: 16px;
   width: 16px;
-  left: 25px;
+  left: 17px;
 
   @media only screen and (max-width: 600px) {
     position: relative;

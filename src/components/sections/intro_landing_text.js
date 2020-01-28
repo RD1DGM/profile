@@ -1,7 +1,7 @@
 import React from "react";
 import { ContextCreator } from "../../store";
 import styled, { css, keyframes } from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   fadeUp,
   fadeDown,
@@ -30,7 +30,6 @@ const IntroText = styled.div`
 
 const P1 = styled(motion.p)`
   color: #fff;
-  ${"" /* font-size: 6rem; */}
   font-size: calc(2.25rem + 3.5vw);
   font-weight: 700;
   letter-spacing: -3px;
@@ -42,14 +41,6 @@ const P1 = styled(motion.p)`
     @media only screen and (max-width: 600px) {
       margin-left: 0.5rem;
     }
-  }
-
-  @media only screen and (max-width: 600px) {
-    ${"" /* font-size: 2rem; */}
-  }
-
-  @media only screen and (min-width: 600px) and (max-width: 1135px) {
-    ${"" /* font-size: 3.5rem; */}
   }
 `;
 
@@ -184,55 +175,60 @@ function IntroductionTxt() {
   const { state } = React.useContext(ContextCreator);
 
   return (
-    <IntroText>
-      <P1
-        initial={
-          state.targetClass === "revert" ? fadeUp.initial : fadeDown.initial
-        }
-        animate={
-          state.targetClass === "revert" ? fadeUp.animate : fadeDown.animate
-        }
-        transition={
-          state.targetClass === "revert"
-            ? fadeUp.transition
-            : fadeDown.transition
-        }
-      >
-        Hi, I'm
-        <span>Rafael Mariscal</span>
-        <b>.</b>
-      </P1>
-      <P2
-        initial={
-          state.targetClass === "revert"
-            ? slideLeft.initial
-            : slideRight.initial
-        }
-        animate={
-          state.targetClass === "revert"
-            ? slideLeft.animate
-            : slideRight.animate
-        }
-        transition={
-          state.targetClass === "revert"
-            ? slideLeft.transition
-            : slideRight.transition
-        }
-      >
-        Interactive
-        <motion.span
+    <AnimatePresence>
+      <IntroText>
+        <P1
+          initial={
+            state.targetClass === "revert" ? fadeUp.initial : fadeDown.initial
+          }
+          animate={
+            state.targetClass === "revert" ? fadeUp.animate : fadeDown.animate
+          }
+          transition={
+            state.targetClass === "revert"
+              ? fadeUp.transition
+              : fadeDown.transition
+          }
+          exit={{ opacity: 0 }}
+        >
+          Hi, I'm
+          <span>Rafael Mariscal</span>
+          <b>.</b>
+        </P1>
+        <P2
+          initial={
+            state.targetClass === "revert"
+              ? slideLeft.initial
+              : slideRight.initial
+          }
           animate={
             state.targetClass === "revert"
-              ? colorChange.animate
-              : revertColor.animate
+              ? slideLeft.animate
+              : slideRight.animate
           }
-          transition={colorChange.transition}
+          transition={
+            state.targetClass === "revert"
+              ? slideLeft.transition
+              : slideRight.transition
+          }
+          exit={{ opacity: 0 }}
         >
-          Front-End Developer
-        </motion.span>
-      </P2>
-      <Underline target={state.targetClass} />
-    </IntroText>
+          Interactive
+          <motion.span
+            animate={
+              state.targetClass === "revert"
+                ? colorChange.animate
+                : revertColor.animate
+            }
+            transition={colorChange.transition}
+            exit={{ opacity: 0 }}
+          >
+            Front-End Developer
+          </motion.span>
+        </P2>
+        <Underline target={state.targetClass} exit={{ opacity: 0 }} />
+      </IntroText>
+    </AnimatePresence>
   );
 }
 

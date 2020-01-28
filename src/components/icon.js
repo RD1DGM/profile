@@ -27,7 +27,7 @@ function icon() {
   return (
     <NavLogo
       whileHover={{
-        rotate: -45,
+        rotate: 10,
         scale: 0.8
       }}
       initial={{ opacity: 0, translateY: -40, scale: 1.5 }}

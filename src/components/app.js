@@ -5,10 +5,11 @@ import Icon from "./icon";
 import styled from "styled-components";
 import ScrollBar from "./scrollbar";
 import Email from "./email";
+import Projects from "./project";
 
 const AppContainer = styled.div`
-  height: 200vh;
-  overflow: hidden;
+  ${"" /* overflow: hidden; */}
+  position: relative;
   background-color: hsl(233, 14%, 13%);
 `;
 
@@ -20,6 +21,7 @@ function App() {
       <Icon />
       <ScrollBar />
       <Email />
+      <Projects />
     </AppContainer>
   );
 }

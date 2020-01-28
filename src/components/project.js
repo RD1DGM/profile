@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+import ProjectHeader from "../components/sections/project_header";
+import { IntroContainer } from "./introduction";
+import { useInView } from "react-intersection-observer";
+
+const ProjectContainer = styled(IntroContainer)`
+  height: 100vh;
+  ${"" /* opacity: 1; */}
+  background-color: hsl(233, 14%, 13%);
+`;
 
 function Projects() {
-    return (
-        <div>
+  const [ref, inView] = useInView({
+    threshold: 0.51
+  });
 
-        </div>
-    )
+  return (
+    <ProjectContainer state={inView} ref={ref}>
+      {inView && <ProjectHeader />}
+    </ProjectContainer>
+  );
 }
 
-export default Projects 
+export default Projects;
