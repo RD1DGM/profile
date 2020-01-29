@@ -9,7 +9,7 @@ import {
   slideRight,
   colorChange,
   revertColor
-} from "../../animations/animations";
+} from "../../animations/animation";
 
 const IntroText = styled.div`
   grid-row: 2/3;

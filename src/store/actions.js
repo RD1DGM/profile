@@ -14,5 +14,15 @@ export default function useActions() {
     [dispatch]
   );
 
-  return { getTargetClass };
+  const setLandingPage = React.useCallback(
+    bool => {
+      dispatch({
+        type: "SET_LANDING_PAGE",
+        landingPage: bool
+      });
+    },
+    [dispatch]
+  );
+
+  return { getTargetClass, setLandingPage };
 }

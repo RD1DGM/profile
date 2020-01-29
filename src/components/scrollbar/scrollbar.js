@@ -33,7 +33,7 @@ const ScrolledDiv = styled.div.attrs(props => ({
   }
 }))`
   width: 6px;
-  z-index: 101;
+  z-index: 103;
   display: relative;
   position: fixed;
   top: 0;

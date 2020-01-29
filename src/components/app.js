@@ -1,15 +1,13 @@
 import React from "react";
-import Introduction from "./introduction";
-import Frame from "./frame";
-import Icon from "./icon";
+import Introduction from "./introduction/introduction";
+import Frame from "./frame/frame";
+import Icon from "./icon/logo";
 import styled from "styled-components";
-import ScrollBar from "./scrollbar";
-import Email from "./email";
-import Projects from "./project";
+import ScrollBar from "./scrollbar/scrollbar";
+import Email from "./email/email";
+import Projects from "./projects/project";
 
 const AppContainer = styled.div`
-  ${"" /* overflow: hidden; */}
-  position: relative;
   background-color: hsl(233, 14%, 13%);
 `;
 

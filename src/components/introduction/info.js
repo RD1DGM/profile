@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import { ContextCreator } from "../../store";
-import { Logos } from "../../assets/logos";
+import { Logos } from "../../assets/about-logos";
 
 const {
   affinity,
@@ -71,6 +71,10 @@ const AboutP = styled.div`
       justify-self: center;
       text-align: center;
     }
+
+    @media only screen and (min-width: 741px) and (max-width: 845px) {
+      margin-bottom: 1rem;
+    }
   }
 
   @media only screen and (max-width: 740px) {
@@ -92,10 +96,9 @@ const AboutList = styled.div`
   grid-row: 3/4;
   justify-self: flex-start;
   margin-top: -5.5rem;
-  margin-left: 0.5rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(11rem, 1fr));
-  grid-auto-rows: 3rem 2rem 2rem 2rem 2rem 3rem 2rem 2rem 3rem 2rem 2rem;
+  grid-auto-rows: 3.5rem 2rem 2rem 2rem 2rem 3.5rem 2rem 2rem 3.5rem 2rem 2rem;
   gap: 0px 10px;
   display: ${props => (props.state === "fill" ? "grid" : "none")};
   animation: ${fadeIn} 600ms ease-out 1450ms forwards;
@@ -111,7 +114,6 @@ const AboutList = styled.div`
     span::before {
       display: block;
       float: left;
-      ${"" /* transform: translateX(-0.5rem); */}
       margin-right: 5px;
       width: calc(15px + 0.5vw);
       height: calc(15px + 0.5vw);
@@ -122,8 +124,7 @@ const AboutList = styled.div`
     grid-column: 1/3;
     margin: 1.5rem 0 0 1.6rem;
     font-weight: 800;
-    transform: translate(-1.5rem, -0.7rem);
-    ${"" /* transform: translateY( -0.7rem); */}
+    transform: translate(-1.5rem, -0.05rem);
     text-decoration: underline;
 
     @media only screen and (max-width: 750px) {
@@ -197,7 +198,7 @@ const AboutList = styled.div`
     grid-column: 1/3;
     margin: 2.5rem 0 0 1.6rem;
     font-weight: 800;
-    transform: translate(-1.5rem, -1.6rem);
+    transform: translate(-1.5rem, -1rem);
     text-decoration: underline;
 
     @media only screen and (max-width: 750px) {
@@ -241,7 +242,7 @@ const AboutList = styled.div`
     grid-column: 1/3;
     margin: 2.5rem 0 0 1.6rem;
     font-weight: 800;
-    transform: translate(-1.5rem, -1.6rem);
+    transform: translate(-1.5rem, -1rem);
     text-decoration: underline;
 
     @media only screen and (max-width: 750px) {
@@ -285,7 +286,7 @@ const AboutList = styled.div`
   }
 
   @media only screen and (max-width: 740px) {
-    margin-top: -4rem;
+    margin-top: -5rem;
     justify-self: center;
     grid-template-columns: repeat(2, minmax(75px, 180px));
 
@@ -295,7 +296,7 @@ const AboutList = styled.div`
   }
 
   @media only screen and (min-width: 740px) and (max-width: 845px) {
-    margin-top: -6rem;
+    margin-top: -7rem;
     grid-template-columns: repeat(2, minmax(100px, 0.6fr));
   }
 `;
@@ -310,10 +311,9 @@ function IntroductionParagraph() {
       <AboutP state={target}>
         Hello! I’m Rafael, a <b>front-end developer </b> & <b> UI Designer</b>{" "}
         based in Toronto, ON who has an obsession for building interactive and
-        intuitive User Interface and User Experience. I develop dynamic and
-        responsive <strong>web</strong> and{" "}
-        <strong>blockchain applications</strong> that provides pixel-perfect
-        interface.
+        intuitive User Interface and User Experience. I develop dynamic{" "}
+        <strong>web</strong> and <strong>blockchain applications</strong> that
+        provides pixel-perfect interface.
         <p>The tools and technologies i've been working with recently:</p>
       </AboutP>
       <AboutList state={target}>

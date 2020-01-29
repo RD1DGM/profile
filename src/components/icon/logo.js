@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo.svg";
+import Logo from "../../assets/logo.svg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 

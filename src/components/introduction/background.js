@@ -1,6 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import useActions from "../../store/actions";
+import { ContextCreator } from "../../store/index";
 import styled, { keyframes } from "styled-components";
 
 const THRESHHOLD = [
@@ -39,19 +40,22 @@ const IntroBox = styled.div`
   transition: height 1100ms ease;
   animation: ${fadeIn} 800ms ease 250ms forwards;
 
-  @media only screen and (max-height: 900px) {
+  @media only screen and (max-height: 1000px) {
     height: ${props => (props.clientRect >= -20 ? "50vh" : "100%")};
   }
 `;
 
 function IntroductionBG() {
-  const { getTargetClass } = useActions();
+  const { getTargetClass, setLandingPage } = useActions();
   const [ref, , entry] = useInView({ threshold: THRESHHOLD });
   const target =
     entry && entry.target.classList[entry.target.classList.length - 1];
   const boundingClient = entry && entry.boundingClientRect.top;
 
-  React.useEffect(() => getTargetClass(target), [target, getTargetClass]);
+  React.useEffect(() => {
+    getTargetClass(target);
+    boundingClient >= -20 ? setLandingPage(true) : setLandingPage(false);
+  }, [target, getTargetClass, setLandingPage, boundingClient]);
 
   return (
     <IntroBox
