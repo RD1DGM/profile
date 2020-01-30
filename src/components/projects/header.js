@@ -29,7 +29,7 @@ const Header = styled(AboutText)`
   grid-row: 1/4;
   justify-self: flex-start;
   align-self: center;
-  transform: rotate(-90deg) translate(-0.6vw, -0.8vw);
+  transform: rotate(-90deg) translate(-0.6vw, -0.92vw);
   display: block;
   opacity: 0;
   animation: ${props =>
