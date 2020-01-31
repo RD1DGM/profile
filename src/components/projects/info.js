@@ -190,7 +190,6 @@ export const SecondImageInfo = ({ state }) => {
       </p>
       <p>
         Adobe-Illustrator Sketch Affinity-Designer MaterialUI Material-Design
-        React-Sketch(API)
       </p>
       <p>
         <span>Animation ⯈</span>
