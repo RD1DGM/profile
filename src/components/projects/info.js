@@ -1,5 +1,29 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
+import MicrotreatyAnimation from "../../assets/microtreaty.mp4";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
+import { Logos } from "../../assets/about-logos";
+
+const { githubY } = Logos;
+
+const useStyles = makeStyles(theme => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "3px solid #e6bb00",
+    boxShadow: theme.shadows[5]
+    // minWidth: 500,
+    // maxWidth: "80vw",
+    // width: "50vh"
+  }
+}));
 
 const fadeIn = keyframes`
 from {
@@ -154,6 +178,56 @@ const ImageInfo2 = styled(ImageInfo)`
   }
 `;
 
+const ImageInfo3 = styled(ImageInfo2)`
+  grid-row: 4/5;
+  animation: ${props =>
+    props.state > 0.7
+      ? css`
+          ${fadeIn} 650ms ease-out 1000ms forwards
+        `
+      : css`
+          ${fadeOut} 650ms ease-out 100ms forwards
+        `};
+
+  p:nth-child(1) {
+    span {
+      color: #00e658;
+    }
+  }
+
+  p:nth-child(4) {
+    span {
+      padding: 0px;
+      border: none;
+      border-radius: 0px;
+      color: none;
+
+      &:nth-child(1) {
+        background: url(${githubY});
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 45px;
+        height: 45px;
+        transition: filter 200ms ease-out;
+
+        &:hover {
+          filter: contrast(30%);
+        }
+      }
+
+      &:nth-child(2) {
+        padding: 0.5rem 0.6rem 0.5rem 0.8rem;
+        border: 3px solid #e6bb00;
+        border-radius: 6px;
+        color: #e6bb00;
+        &:hover {
+          color: #1d1e26;
+        }
+      }
+    }
+  }
+`;
+
 export const FirstImageInfo = ({ state }) => {
   return (
     <ImageInfo state={state}>
@@ -178,6 +252,17 @@ export const FirstImageInfo = ({ state }) => {
 };
 
 export const SecondImageInfo = ({ state }) => {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <ImageInfo2 state={state}>
       <p>
@@ -192,7 +277,35 @@ export const SecondImageInfo = ({ state }) => {
         Adobe-Illustrator Sketch Affinity-Designer MaterialUI Material-Design
       </p>
       <p>
-        <span>Animation ⯈</span>
+        <span onClick={handleOpen}>Animation ⯈</span>
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classes.modal}
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500
+          }}
+        >
+          <Fade in={open}>
+            <div className={classes.paper}>
+              <p id="transition-modal-description">
+                <video
+                  controls
+                  autoPlay
+                  // height="840" width="1181"
+                  style={{ height: "auto", width: "calc(200px + 40vw)" }}
+                  loop
+                >
+                  <source src={MicrotreatyAnimation} type="video/mp4" />
+                </video>
+              </p>
+            </div>
+          </Fade>
+        </Modal>
         <span
           onClick={() =>
             window.open(
@@ -205,5 +318,34 @@ export const SecondImageInfo = ({ state }) => {
         </span>
       </p>
     </ImageInfo2>
+  );
+};
+
+export const ThirdImageInfo = ({ state }) => {
+  return (
+    <ImageInfo3 state={state}>
+      <p>
+        Iris <span>(Software Development)</span>
+      </p>
+      <p>
+        A <b>Decentralized Web Application </b> platform for publishing,
+        networking, and socializing that incentivizes users to have beneficial
+        interactions around the globe.
+      </p>
+      <p>React.js Redux Node.js Express Firebase Solidity</p>
+      <p>
+        <span
+          onClick={() =>
+            window.open("https://github.com/rd1dgm/iris", "_blank")
+          }
+        />
+        <span
+          onClick={() => window.open("https://iris-f137c.web.app/", "_blank")}
+        >
+          {" "}
+          Website ⯈
+        </span>
+      </p>
+    </ImageInfo3>
   );
 };

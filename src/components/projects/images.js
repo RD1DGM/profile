@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes, css } from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { Images } from "../../assets/project-images";
-import { FirstImageInfo, SecondImageInfo } from "./info";
+import { FirstImageInfo, SecondImageInfo, ThirdImageInfo } from "./info";
 
 const { Iris, Microtreaty, SustainEx } = Images;
 
@@ -84,6 +84,7 @@ const FirstImage = styled.div`
   height: 99%;
   opacity: 0;
   filter: grayscale(80%);
+  ${"" /* filter: grayscale(40%) blur(5px) contrast(15%); */}
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
     props.state > 0.475
@@ -186,7 +187,8 @@ function ProjectImages() {
         <FirstImageInfo state={entry && entry.intersectionRatio} />
         <SecondImage state={entry && entry.intersectionRatio} />
         <SecondImageInfo state={entry && entry.intersectionRatio} />
-        <ThirdImage state={entry && entry.intersectionRatio}></ThirdImage>
+        <ThirdImage state={entry && entry.intersectionRatio} />
+        <ThirdImageInfo state={entry && entry.intersectionRatio} />
       </ImageContainer>
     </>
   );

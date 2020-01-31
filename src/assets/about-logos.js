@@ -14,6 +14,7 @@ import github from "./about-images/github.svg";
 import gitlab from "./about-images/gitlab.svg";
 import git from "./about-images/git.svg";
 import jira from "./about-images/jira.svg";
+import githubY from "./about-images/github-yellow.svg";
 
 export const Logos = {
   js,
@@ -31,5 +32,6 @@ export const Logos = {
   github,
   gitlab,
   git,
-  jira
+  jira,
+  githubY
 };
