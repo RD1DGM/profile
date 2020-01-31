@@ -10,11 +10,6 @@ export const IntroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: 1fr auto 1fr;
-
-  ${"" /* @media only screen and (min-width: 600px) and (max-width: 1135px) {
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-  } */}
 `;
 
 function Introduction() {

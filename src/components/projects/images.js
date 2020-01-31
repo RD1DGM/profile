@@ -47,6 +47,16 @@ const ImageContainer = styled.div`
     height: 100%;
     grid-template-columns: 1fr 1fr;
   }
+
+  @media only screen and (max-width: 740px) {
+    grid-template-columns: 1fr;
+  }
+  @media only screen and (min-width: 741px) and (max-width: 1220px) {
+    grid-template-columns: minmax(10rem, 1fr) minmax(10rem, 1fr) minmax(
+        2.5rem,
+        0.2fr
+      );
+  }
 `;
 
 const SubHeader = styled.div`
@@ -78,13 +88,12 @@ const FirstImage = styled.div`
   grid-row: 2/3;
   background: url(${SustainEx});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: 15% 0%;
   width: 99%;
   height: 99%;
   opacity: 0;
   filter: grayscale(80%);
-  ${"" /* filter: grayscale(40%) blur(5px) contrast(15%); */}
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
     props.state > 0.475
@@ -101,22 +110,19 @@ const FirstImage = styled.div`
     filter: none;
   }
 
-  @media only screen and (max-width: 740px) {
+  @media only screen and (max-width: 1220px) {
     grid-column: 1/3;
+    filter: opacity(20%);
   }
 `;
 
-const SecondImage = styled.div`
+const SecondImage = styled(FirstImage)`
   grid-column: 1/2;
   grid-row: 3/4;
   background: url(${Microtreaty});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: 30% 0%;
-  width: 99%;
-  height: 99%;
-  opacity: 0;
-  filter: grayscale(80%);
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
     props.state > 0.6
@@ -126,29 +132,15 @@ const SecondImage = styled.div`
       : css`
           ${fadeOut} 650ms ease-out 100ms forwards
         `};
-
-  &:hover {
-    width: 100%;
-    height: 100%;
-    filter: none;
-  }
-
-  @media only screen and (max-width: 740px) {
-    grid-column: 1/3;
-  }
 `;
 
-const ThirdImage = styled.div`
+const ThirdImage = styled(FirstImage)`
   grid-column: 1/2;
   grid-row: 4/5;
   background: url(${Iris});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: 35% 0%;
-  width: 99%;
-  height: 99%;
-  opacity: 0;
-  filter: grayscale(80%);
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
     props.state > 0.7
@@ -158,16 +150,6 @@ const ThirdImage = styled.div`
       : css`
           ${fadeOut} 650ms ease-out 100ms forwards
         `};
-
-  &:hover {
-    width: 100%;
-    height: 100%;
-    filter: none;
-  }
-
-  @media only screen and (max-width: 740px) {
-    grid-column: 1/3;
-  }
 `;
 
 const Threshold = [0.43, 0.475, 0.6, 0.7];

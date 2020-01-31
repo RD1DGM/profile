@@ -212,7 +212,6 @@ const AboutList = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     float: left;
-    ${"" /* transform: translateX(-0.5rem); */}
     width: calc(15px + 0.5vw);
     height: calc(15px + 0.5vw);
   }

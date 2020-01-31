@@ -117,6 +117,23 @@ const ImageInfo = styled.div`
       color: #1d1e26;
     }
   }
+
+  @media only screen and (max-width: 1220px) {
+    grid-column: 1/3;
+
+    p {
+      justify-self: flex-start;
+      text-align: left;
+    }
+
+    p:nth-child(1) {
+      font-size: calc(0.85rem + 0.85vw);
+    }
+
+    p:nth-child(2) {
+      width: 100%;
+    }
+  }
 `;
 
 const ImageInfo2 = styled(ImageInfo)`
@@ -146,7 +163,6 @@ const ImageInfo2 = styled(ImageInfo)`
     display: grid;
     grid-template-column: 1fr 1fr;
     gap: 0px 1rem;
-    transform: translateY(0.75rem);
 
     &:hover {
       background-color: transparent;
@@ -180,6 +196,7 @@ const ImageInfo2 = styled(ImageInfo)`
 
 const ImageInfo3 = styled(ImageInfo2)`
   grid-row: 4/5;
+  margin-top: 0;
   animation: ${props =>
     props.state > 0.7
       ? css`
@@ -222,6 +239,17 @@ const ImageInfo3 = styled(ImageInfo2)`
         color: #e6bb00;
         &:hover {
           color: #1d1e26;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 740px) {
+    p:nth-child(4) {
+      span {
+        &:nth-child(1) {
+          width: 35px;
+          height: 35px;
         }
       }
     }
@@ -273,9 +301,7 @@ export const SecondImageInfo = ({ state }) => {
         are stored on the blockchain. These assets can be transferred worldwide
         and peer-to-peer. Just like sending a simple text message.
       </p>
-      <p>
-        Adobe-Illustrator Sketch Affinity-Designer MaterialUI Material-Design
-      </p>
+      <p>Adobe-Illustrator Sketch Affinity-Designer Material-Design</p>
       <p>
         <span onClick={handleOpen}>Animation ⯈</span>
         <Modal
