@@ -41,7 +41,9 @@ const ScrolledDiv = styled.div.attrs(props => ({
   background-color: #e6bb00;
 
   @media only screen and (max-width: 740px) {
+    width: 5px;
     background-color: #1d1e26;
+    border-right: 2px solid #e6bb00;
   }
 `;
 
