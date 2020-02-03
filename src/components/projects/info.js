@@ -319,6 +319,7 @@ export const SecondImageInfo = ({ state }) => {
                 <video
                   controls
                   autoPlay
+                  playsinline
                   style={{ height: "auto", width: "calc(200px + 40vw)" }}
                   loop
                 >
