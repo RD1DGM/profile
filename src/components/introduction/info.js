@@ -33,7 +33,7 @@ to {
 }
 `;
 
-const AboutP = styled.div`
+const AboutBody = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
   align-self: center;
@@ -47,7 +47,7 @@ const AboutP = styled.div`
   text-justify: auto;
   display: ${props => (props.state === "fill" ? "initial" : "none")};
   animation: ${fadeIn} 600ms ease-out 1050ms forwards;
-  transform: translateY(-8.7rem);
+  transform: translateY(-9.5rem);
   color: hsl(233, 14%, 20%);
   opacity: 0;
   z-index: 20;
@@ -62,9 +62,10 @@ const AboutP = styled.div`
 
   p {
     font-size: calc(0.7rem + 0.3vw);
-    font-style: italic;
+    letter-spacing: 0px;
+    text-align: left;
     animation: ${fadeIn} 600ms ease-out 1300ms forwards;
-    transform: translateY(3rem);
+    transform: translateY(2.5rem);
     opacity: 0;
 
     @media only screen and (max-width: 740px) {
@@ -80,6 +81,7 @@ const AboutP = styled.div`
   @media only screen and (max-width: 740px) {
     justify-self: center;
     width: 75vw;
+    transform: translateY(-6.5rem);
   }
 
   @media only screen and (min-width: 741px) and (max-width: 845px) {
@@ -307,14 +309,14 @@ function IntroductionParagraph() {
 
   return (
     <>
-      <AboutP state={target}>
+      <AboutBody state={target}>
         Hello! I’m Rafael, a <b>front-end developer </b> & <b> UI Designer</b>{" "}
         based in Toronto, ON who has an obsession for building interactive and
         intuitive User Interface and User Experience. I develop dynamic{" "}
         <strong>web</strong> and <strong>blockchain applications</strong> that
         provides pixel-perfect interface.
         <p>The tools and technologies i've been working with recently:</p>
-      </AboutP>
+      </AboutBody>
       <AboutList state={target}>
         <p>Programming</p>
         <p>Javascript(ES6+)</p>
