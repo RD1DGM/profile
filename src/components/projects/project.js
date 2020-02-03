@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectHeader from "./header";
-// import { useInView } from "react-intersection-observer";
 import ProjectInfo from "./images";
 
 const ProjectContainer = styled.div`

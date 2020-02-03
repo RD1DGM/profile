@@ -6,6 +6,7 @@ import styled from "styled-components";
 import ScrollBar from "./scrollbar/scrollbar";
 import Email from "./email/email";
 import Projects from "./projects/project";
+import Contact from "./contact/contact";
 
 const AppContainer = styled.div`
   background-color: hsl(233, 14%, 13%);
@@ -20,6 +21,7 @@ function App() {
       <ScrollBar />
       <Email />
       <Projects />
+      <Contact />
     </AppContainer>
   );
 }

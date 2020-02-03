@@ -19,9 +19,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     border: "3px solid #e6bb00",
     boxShadow: theme.shadows[5]
-    // minWidth: 500,
-    // maxWidth: "80vw",
-    // width: "50vh"
   }
 }));
 
@@ -260,7 +257,7 @@ export const FirstImageInfo = ({ state }) => {
   return (
     <ImageInfo state={state}>
       <p>
-        Sustainability.Exchange <span>(Software Development)</span>
+        Sustainability Exchange <span>(Software Development)</span>
       </p>
       <p>
         A Prediction Market based <b>Decentralized Web Application </b>for ESG
@@ -301,7 +298,7 @@ export const SecondImageInfo = ({ state }) => {
         are stored on the blockchain. These assets can be transferred worldwide
         and peer-to-peer. Just like sending a simple text message.
       </p>
-      <p>Adobe-Illustrator Sketch Affinity-Designer Material-Design</p>
+      <p>Adobe-Illustrator Adobe-XD Sketch Material-Design</p>
       <p>
         <span onClick={handleOpen}>Animation ⯈</span>
         <Modal
@@ -322,7 +319,6 @@ export const SecondImageInfo = ({ state }) => {
                 <video
                   controls
                   autoPlay
-                  // height="840" width="1181"
                   style={{ height: "auto", width: "calc(200px + 40vw)" }}
                   loop
                 >
