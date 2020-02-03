@@ -27,7 +27,7 @@ to {
 
 const Button = styled.button`
   height: 50px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0.5rem 1.5rem;
   border: 3px solid hsl(233, 14%, 20%);
   border-radius: 6px;

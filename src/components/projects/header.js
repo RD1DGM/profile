@@ -35,7 +35,7 @@ const Header = styled(AboutText)`
   animation: ${props =>
     props.state > 0.35
       ? css`
-          ${fadeIn} 650ms ease-out 200ms forwards
+          ${fadeIn} 650ms ease-out 100ms forwards
         `
       : css`
           ${fadeOut} 650ms ease-out 100ms forwards
@@ -59,7 +59,7 @@ const Header = styled(AboutText)`
     animation: ${props =>
       props.state > 0.35
         ? css`
-            ${fadeIn} 650ms ease-out 500ms forwards
+            ${fadeIn} 650ms ease-out 400ms forwards
           `
         : css`
             ${fadeOut} 650ms ease-out 100ms forwards
@@ -72,7 +72,8 @@ function ProjectHeader() {
     state: { landingPage }
   } = React.useContext(ContextCreator);
   const [ref, , entry] = useInView({
-    threshold: 0.35
+    threshold: 0.35,
+    triggerOnce: true
   });
 
   return (

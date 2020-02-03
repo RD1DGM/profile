@@ -12,10 +12,14 @@ const ContactContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto 1fr;
   background-color: #e6bb00;
+
+  ${"" /* @media only screen and (max-height: 1000px) {
+    height: 120vh;
+  } */}
 `;
 
 function Contact() {
-  const [ref, , entry] = useInView({ threshold: [0, 0.4] });
+  const [ref, , entry] = useInView({ threshold: 0.4, triggerOnce: true });
 
   const intersectionRatio = 0.4;
 

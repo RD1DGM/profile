@@ -32,7 +32,7 @@ const fadeIn = keyframes`
 
 const IntroBox = styled.div`
   background: hsl(49, 100%, 45%);
-  height: ${props => (props.clientRect >= -20 ? "50vh" : "100vh")};
+  height: ${props => (props.clientRect >= -20 ? "50vh" : "120vh")};
   width: 100vw;
   grid-row: 1/4;
   grid-column: 1/4;
@@ -41,7 +41,7 @@ const IntroBox = styled.div`
   animation: ${fadeIn} 800ms ease 250ms forwards;
 
   @media only screen and (max-height: 1000px) {
-    height: ${props => (props.clientRect >= -20 ? "50vh" : "100%")};
+    height: ${props => (props.clientRect >= -20 ? "50vh" : "110%")};
   }
 `;
 
