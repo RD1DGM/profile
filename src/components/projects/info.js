@@ -137,7 +137,7 @@ const ImageInfo2 = styled(ImageInfo)`
   grid-row: 3/4;
   display: grid;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.475
       ? css`
           ${fadeIn} 650ms ease-out 800ms forwards
         `
@@ -195,7 +195,7 @@ const ImageInfo3 = styled(ImageInfo2)`
   grid-row: 4/5;
   margin-top: 0;
   animation: ${props =>
-    props.state > 0.7
+    props.state > 0.475
       ? css`
           ${fadeIn} 650ms ease-out 1000ms forwards
         `

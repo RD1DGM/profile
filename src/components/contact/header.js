@@ -35,9 +35,9 @@ const Header = styled.p`
   color: #fff;
   opacity: 0;
   animation: ${props =>
-    props.state >= 0.34
+    props.state >= 0.4
       ? css`
-          ${fadeIn} 650ms ease-out 300ms forwards
+          ${fadeIn} 650ms ease-out 500ms forwards
         `
       : css`
           ${fadeOut} 650ms ease-out 100ms forwards

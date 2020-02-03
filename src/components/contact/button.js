@@ -37,9 +37,9 @@ const Button = styled.button`
   transition: background-color 350ms ease-out, color 350ms ease-out;
   opacity: 0;
   animation: ${props =>
-    props.state >= 0.34
+    props.state >= 0.4
       ? css`
-          ${fadeIn} 650ms ease-out 700ms forwards
+          ${fadeIn} 650ms ease-out 900ms forwards
         `
       : css`
           ${fadeOut} 650ms ease-out 100ms forwards

@@ -15,13 +15,13 @@ const ContactContainer = styled.div`
 `;
 
 function Contact() {
-  const [ref, , entry] = useInView({ threshold: [0, 0.3] });
+  const [ref, , entry] = useInView({ threshold: [0, 0.4] });
 
-  const intersectionRatio = 0.34;
+  const intersectionRatio = 0.4;
 
   return (
     <ContactContainer ref={ref}>
-      {intersectionRatio >= 0.34 && (
+      {intersectionRatio >= 0.4 && (
         <>
           {" "}
           <ContactHeader ratio={entry && entry.intersectionRatio} />

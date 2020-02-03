@@ -38,9 +38,9 @@ const Body = styled.p`
   color: hsl(233, 14%, 20%);
   opacity: 0;
   animation: ${props =>
-    props.state >= 0.34
+    props.state >= 0.4
       ? css`
-          ${fadeIn} 650ms ease-out 500ms forwards
+          ${fadeIn} 650ms ease-out 700ms forwards
         `
       : css`
           ${fadeOut} 650ms ease-out 100ms forwards
