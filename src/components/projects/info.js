@@ -100,7 +100,7 @@ const ImageInfo = styled.div`
   p:nth-child(4) {
     grid-row: 4/5;
     align-self: flex-start;
-    padding: 0.5rem 0.6rem 0.5rem 0.8rem;
+    padding: 0.5rem 0.8rem;
     border: 3px solid #e6bb00;
     border-radius: 6px;
     color: #e6bb00;
@@ -167,7 +167,7 @@ const ImageInfo2 = styled(ImageInfo)`
     }
 
     span {
-      padding: 0.5rem 0.6rem 0.5rem 0.8rem;
+      padding: 0.5rem 0.8rem;
       border: 3px solid #e6bb00;
       border-radius: 6px;
       color: #e6bb00;
@@ -230,7 +230,7 @@ const ImageInfo3 = styled(ImageInfo2)`
       }
 
       &:nth-child(2) {
-        padding: 0.5rem 0.6rem 0.5rem 0.8rem;
+        padding: 0.5rem 0.8rem;
         border: 3px solid #e6bb00;
         border-radius: 6px;
         color: #e6bb00;
@@ -270,7 +270,7 @@ export const FirstImageInfo = ({ state }) => {
           window.open("https://dev.sustainability.exchange/", "_blank")
         }
       >
-        Website ⯈
+        Website &#10148;
       </p>
     </ImageInfo>
   );
@@ -300,7 +300,7 @@ export const SecondImageInfo = ({ state }) => {
       </p>
       <p>Adobe-Illustrator Adobe-XD Sketch Material-Design</p>
       <p>
-        <span onClick={handleOpen}>Animation ⯈</span>
+        <span onClick={handleOpen}>Animation &#10148;</span>
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
@@ -336,7 +336,7 @@ export const SecondImageInfo = ({ state }) => {
             )
           }
         >
-          Prototypes ⯈
+          Prototypes &#10148;
         </span>
       </p>
     </ImageInfo2>
@@ -365,7 +365,7 @@ export const ThirdImageInfo = ({ state }) => {
           onClick={() => window.open("https://iris-f137c.web.app/", "_blank")}
         >
           {" "}
-          Website ⯈
+          Website &#10148;
         </span>
       </p>
     </ImageInfo3>
