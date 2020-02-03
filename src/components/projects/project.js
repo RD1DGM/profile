@@ -11,7 +11,7 @@ const ProjectContainer = styled.div`
   background-color: hsl(233, 14%, 13%);
 
   @media only screen and (max-height: 1000px) {
-    height: 145vh;
+    height: 141vh;
   }
 `;
 

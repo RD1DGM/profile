@@ -69,7 +69,7 @@ const SubHeader = styled.div`
   font-weight: 900;
   opacity: 0;
   animation: ${props =>
-    props.state > 0.5
+    props.state > 0.55
       ? css`
           ${fadeIn} 350ms ease-out 300ms forwards
         `
@@ -96,7 +96,7 @@ const FirstImage = styled.div`
   filter: grayscale(80%);
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
-    props.state > 0.5
+    props.state > 0.55
       ? css`
           ${fadeIn} 650ms ease-out 500ms forwards
         `
@@ -125,7 +125,7 @@ const SecondImage = styled(FirstImage)`
   background-position: 30% 0%;
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
-    props.state > 0.5
+    props.state > 0.55
       ? css`
           ${fadeIn} 650ms ease-out 700ms forwards
         `
@@ -143,7 +143,7 @@ const ThirdImage = styled(FirstImage)`
   background-position: 35% 0%;
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
-    props.state > 0.5
+    props.state > 0.55
       ? css`
           ${fadeIn} 650ms ease-out 900ms forwards
         `
@@ -154,7 +154,7 @@ const ThirdImage = styled(FirstImage)`
 
 function ProjectImages() {
   const [ref, , entry] = useInView({
-    threshold: 0.5
+    threshold: 0.55
   });
 
   return (
