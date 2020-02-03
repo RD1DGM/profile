@@ -65,6 +65,10 @@ const Header = styled(AboutText)`
             ${fadeOut} 650ms ease-out 100ms forwards
           `};
   }
+
+  @media only screen and (max-height: 640px) {
+    transform: translateY(150px);
+  }
 `;
 
 function ProjectHeader() {
