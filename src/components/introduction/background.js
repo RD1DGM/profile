@@ -41,7 +41,7 @@ const IntroBox = styled.div`
   animation: ${fadeIn} 800ms ease 250ms forwards;
 
   @media only screen and (max-height: 1000px) {
-    height: ${props => (props.clientRect >= -20 ? "50vh" : "100%")};
+    height: ${props => (props.clientRect >= -20 ? "50vh" : "120vh")};
   }
 `;
 

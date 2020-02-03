@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const BorderTop = styled.div`
-  height: 5.5vh;
+  height: 55px;
   width: 100%;
   background-color: hsl(233, 14%, 13%);
   position: fixed;
@@ -15,7 +15,7 @@ const BorderTop = styled.div`
 `;
 
 const BorderBottom = styled.div`
-  height: 5.5vh;
+  height: 55px;
   width: 100%;
   background-color: hsl(233, 14%, 13%);
   position: fixed;
@@ -29,7 +29,7 @@ const BorderBottom = styled.div`
 
 const BorderLeft = styled.div`
   height: 100%;
-  width: 5.5vh;
+  width: 55px;
   background-color: hsl(233, 14%, 13%);
   position: fixed;
   z-index: 99;
@@ -41,7 +41,7 @@ const BorderLeft = styled.div`
 
 const BorderRight = styled.div`
   height: 100%;
-  width: 5.5vh;
+  width: 55px;
   background-color: hsl(233, 14%, 13%);
   position: fixed;
   bottom: 0px;
