@@ -17,7 +17,7 @@
     "react-spring": "^8.0.27",
     "styled-components": "^5.0.0"
   },
-  "homepage": "https://RD1DGM.github.io/v1-Profile",
+  "homepage": "https://RD1DGM.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
