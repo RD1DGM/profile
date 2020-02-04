@@ -50,7 +50,7 @@ const ImageInfo = styled.div`
   grid-template-rows: 1fr auto repeat(2, 1fr);
   opacity: 0;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 650ms ease-out 200ms forwards
         `
@@ -83,6 +83,7 @@ const ImageInfo = styled.div`
     grid-row: 2/3;
     padding: 1rem;
     line-height: 1.3;
+    word-spacing: 0.2rem;
     font-size: calc(0.8rem + 0.3vw);
     width: 110%;
     background-color: #e6bb00;
@@ -137,7 +138,7 @@ const ImageInfo2 = styled(ImageInfo)`
   grid-row: 3/4;
   display: grid;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 650ms ease-out 400ms forwards
         `
@@ -195,7 +196,7 @@ const ImageInfo3 = styled(ImageInfo2)`
   grid-row: 4/5;
   margin-top: 0;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 650ms ease-out 600ms forwards
         `

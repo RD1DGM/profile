@@ -39,7 +39,7 @@ const ImageContainer = styled.div`
       0.2fr
     );
   grid-template-rows: 0.3fr repeat(3, 1fr);
-  gap: 1rem 0;
+  gap: 3.5rem 0;
 
   @media only screen and (max-width: 740px) {
     grid-row: 2/4;
@@ -69,7 +69,7 @@ const SubHeader = styled.div`
   font-weight: 900;
   opacity: 0;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 350ms ease-out 300ms forwards
         `
@@ -96,7 +96,7 @@ const FirstImage = styled.div`
   filter: grayscale(80%);
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 650ms ease-out 200ms forwards
         `
@@ -125,7 +125,7 @@ const SecondImage = styled(FirstImage)`
   background-position: 30% 0%;
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 650ms ease-out 400ms forwards
         `
@@ -143,7 +143,7 @@ const ThirdImage = styled(FirstImage)`
   background-position: 35% 0%;
   transition: filter 300ms ease-out, width 150ms ease-out, height 150ms ease-out;
   animation: ${props =>
-    props.state > 0.6
+    props.state > 0.5
       ? css`
           ${fadeIn} 650ms ease-out 600ms forwards
         `
@@ -154,7 +154,7 @@ const ThirdImage = styled(FirstImage)`
 
 function ProjectImages() {
   const [ref, , entry] = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
     triggerOnce: true
   });
 
