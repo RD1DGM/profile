@@ -14,8 +14,12 @@ const ProjectContainer = styled.div`
     height: 185vh;
   }
 
-  @media only screen and (max-height: 640px) {
-    height: 190vh;
+  @media only screen and (min-height: 601px) and (max-height: 640px) {
+    height: 200vh;
+  }
+
+  @media only screen and (max-height: 600px) {
+    height: 220vh;
   }
 `;
 
